@@ -1,0 +1,99 @@
+
+[2025-03-01T14:21:07.037Z] [INFO] Query: {}
+[2025-03-01T14:21:07.038Z] [INFO] Subtitle request: mediaId=tt26584495, subtitleId=translate_el.vtt
+[2025-03-01T14:21:07.038Z] [INFO] This is a translation request
+[2025-03-01T14:21:07.038Z] [ERROR] Invalid translation request format: translate_el.vtt
+[2025-03-01T19:10:35.653Z] Addon interface loaded successfully
+[2025-03-01T19:10:35.655Z] Server started on port 7000
+[2025-03-01T19:10:35.655Z] Gemini API key configured: Yes
+[2025-03-01T19:10:35.655Z] OpenSubtitles API key configured: Yes
+[2025-03-01T19:10:35.655Z] Add-on URL: http://localhost:7000/manifest.json
+[2025-03-01T19:11:20.824Z] GET /debug.html
+[2025-03-01T19:11:20.824Z] GET /debug.html 200 12ms
+[2025-03-01T19:11:24.020Z] GET /debug/check-api-keys
+[2025-03-01T19:11:24.020Z] GET /check-api-keys 200 2231ms
+[2025-03-01T19:11:29.896Z] POST /debug/translate-text
+[2025-03-01T19:11:29.896Z] POST /translate-text 200 1038ms
+[2025-03-01T19:11:56.738Z] GET /manifest.json
+[2025-03-01T19:11:56.738Z] GET /manifest.json 304 2ms
+[2025-03-01T19:12:09.733Z] GET /subtitles/any/translate_el.vtt
+[2025-03-01T19:12:09.733Z] GET /any/translate_el.vtt 400 4ms
+[2025-03-01T19:12:09.770Z] GET /subtitles/any/translate_el.vtt
+[2025-03-01T19:12:09.770Z] GET /any/translate_el.vtt 400 4ms
+[2025-03-01T19:12:24.072Z] GET /subtitles/movie/tt32221196/filename=One.of.Them.Days.2025.2160p.MA.WEB-DL.DUAL.DD%2B5.1.DV-HDR.H.265-TheBiscuitMan.mkv&videoSize=18797634629&videoHash=71c70b7a79189cf5.json
+[2025-03-01T19:12:24.072Z] GET /subtitles/movie/tt32221196/filename=One.of.Them.Days.2025.2160p.MA.WEB-DL.DUAL.DD%2B5.1.DV-HDR.H.265-TheBiscuitMan.mkv&videoSize=18797634629&videoHash=71c70b7a79189cf5.json 404 11ms
+[2025-03-01T19:12:52.543Z] GET /subtitles/movie/tt8999762/filename=The.Brutalist.2024.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=9631480770&videoHash=0321a92004d9b450.json
+[2025-03-01T19:12:52.543Z] GET /subtitles/movie/tt8999762/filename=The.Brutalist.2024.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=9631480770&videoHash=0321a92004d9b450.json 404 3ms
+[2025-03-01T19:15:21.359Z] Addon interface loaded successfully
+[2025-03-01T19:15:21.360Z] Server started on port 7000
+[2025-03-01T19:15:21.360Z] Gemini API key configured: Yes
+[2025-03-01T19:15:21.360Z] OpenSubtitles API key configured: Yes
+[2025-03-01T19:15:21.360Z] Add-on URL: http://localhost:7000/manifest.json
+[2025-03-01T19:15:45.669Z] GET /manifest.json
+[2025-03-01T19:15:45.669Z] GET /manifest.json 304 9ms
+[2025-03-01T19:16:04.502Z] GET /subtitles/movie/tt32221196/filename=One.of.Them.Days.2025.2160p.MA.WEB-DL.DUAL.DD%2B5.1.DV-HDR.H.265-TheBiscuitMan.mkv&videoSize=18797634629&videoHash=71c70b7a79189cf5.json
+[2025-03-01T19:16:04.502Z] GET /subtitles/movie/tt32221196/filename=One.of.Them.Days.2025.2160p.MA.WEB-DL.DUAL.DD%2B5.1.DV-HDR.H.265-TheBiscuitMan.mkv&videoSize=18797634629&videoHash=71c70b7a79189cf5.json 404 11ms
+[2025-03-01T19:16:27.595Z] GET /subtitles/any/translate_el.vtt
+[2025-03-01T19:16:27.595Z] GET /any/translate_el.vtt 200 8ms
+[2025-03-01T19:17:00.686Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json
+[2025-03-01T19:17:00.686Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json 404 2ms
+[2025-03-01T19:17:20.991Z] GET /subtitles/movie/tt13654226/filename=The.Gorge.2025.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv&videoSize=23466159630&videoHash=f5e4ef8485d8e2c6.json
+[2025-03-01T19:17:20.991Z] GET /subtitles/movie/tt13654226/filename=The.Gorge.2025.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv&videoSize=23466159630&videoHash=f5e4ef8485d8e2c6.json 404 1ms
+[2025-03-01T19:20:00.453Z] Addon interface loaded successfully
+[2025-03-01T19:20:00.454Z] Server started on port 7000
+[2025-03-01T19:20:00.454Z] Gemini API key configured: Yes
+[2025-03-01T19:20:00.455Z] OpenSubtitles API key configured: Yes
+[2025-03-01T19:20:00.455Z] Add-on URL: http://localhost:7000/manifest.json
+[2025-03-01T19:20:28.991Z] GET /manifest.json
+[2025-03-01T19:20:28.991Z] GET /manifest.json 304 7ms
+[2025-03-01T19:20:44.561Z] GET /subtitles/movie/tt26584495/filename=Companion.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4653230558&videoHash=9a1f2519a4f1d0c0.json
+[2025-03-01T19:20:44.561Z] GET /subtitles/movie/tt26584495/filename=Companion.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4653230558&videoHash=9a1f2519a4f1d0c0.json 404 4ms
+[2025-03-01T19:21:16.791Z] GET /subtitles/any/translate_el.vtt
+[2025-03-01T19:21:16.791Z] GET /any/translate_el.vtt 200 1404ms
+[2025-03-01T19:21:32.282Z] GET /subtitles/movie/tt8999762/filename=The.Brutalist.2024.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=9631480770&videoHash=0321a92004d9b450.json
+[2025-03-01T19:21:32.282Z] GET /subtitles/movie/tt8999762/filename=The.Brutalist.2024.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=9631480770&videoHash=0321a92004d9b450.json 404 10ms
+[2025-03-01T19:22:35.772Z] Addon interface loaded successfully
+[2025-03-01T19:22:35.774Z] Server started on port 7000
+[2025-03-01T19:22:35.774Z] Gemini API key configured: Yes
+[2025-03-01T19:22:35.774Z] OpenSubtitles API key configured: Yes
+[2025-03-01T19:22:35.774Z] Add-on URL: http://localhost:7000/manifest.json
+[2025-03-01T19:22:58.136Z] GET /manifest.json
+[2025-03-01T19:22:58.136Z] GET /manifest.json 200 6ms
+[2025-03-01T19:23:13.083Z] GET /subtitles/any/translate_el.vtt
+[2025-03-01T19:23:13.083Z] GET /any/translate_el.vtt 200 1324ms
+[2025-03-01T19:23:26.388Z] GET /subtitles/movie/tt13654226/filename=The.Gorge.2025.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv&videoSize=23466159630&videoHash=f5e4ef8485d8e2c6.json
+[2025-03-01T19:23:26.388Z] GET /subtitles/movie/tt13654226/filename=The.Gorge.2025.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv&videoSize=23466159630&videoHash=f5e4ef8485d8e2c6.json 404 4ms
+[2025-03-01T19:24:14.157Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json
+[2025-03-01T19:24:14.157Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json 404 3ms
+[2025-03-01T19:24:24.304Z] GET /debug.html
+[2025-03-01T19:24:24.304Z] GET /debug.html 304 3ms
+[2025-03-01T19:24:25.808Z] GET /debug/check-api-keys
+[2025-03-01T19:24:25.808Z] GET /check-api-keys 304 2130ms
+[2025-03-01T19:25:35.849Z] Addon interface loaded successfully
+[2025-03-01T19:25:35.851Z] Server started on port 7000
+[2025-03-01T19:25:35.851Z] Gemini API key configured: Yes
+[2025-03-01T19:25:35.851Z] OpenSubtitles API key configured: Yes
+[2025-03-01T19:25:35.851Z] Add-on URL: http://localhost:7000/manifest.json
+[2025-03-01T19:27:06.315Z] GET /manifest.json
+[2025-03-01T19:27:06.315Z] GET /manifest.json 304 8ms
+[2025-03-01T19:27:10.698Z] GET /manifest.json
+[2025-03-01T19:27:10.698Z] GET /manifest.json 304 4ms
+[2025-03-01T19:27:28.373Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json
+[2025-03-01T19:27:28.373Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json 404 4ms
+[2025-03-01T19:27:51.499Z] GET /subtitles/movie/tt13654226/filename=The.Gorge.2025.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv&videoSize=23466159630&videoHash=f5e4ef8485d8e2c6.json
+[2025-03-01T19:27:51.499Z] GET /subtitles/movie/tt13654226/filename=The.Gorge.2025.Hybrid.2160p.WEB-DL.DV.HDR.DDP5.1.Atmos.H265-AOC.mkv&videoSize=23466159630&videoHash=f5e4ef8485d8e2c6.json 404 2ms
+[2025-03-01T19:41:26.698Z] Addon interface loaded successfully
+[2025-03-01T19:41:26.701Z] Server started on port 7000
+[2025-03-01T19:41:26.701Z] Gemini API key configured: Yes
+[2025-03-01T19:41:26.701Z] OpenSubtitles API key configured: Yes
+[2025-03-01T19:41:26.702Z] Add-on URL: http://localhost:7000/manifest.json
+[2025-03-01T19:41:37.559Z] GET /debug.html
+[2025-03-01T19:41:37.559Z] GET /debug.html 304 5ms
+[2025-03-01T19:41:39.978Z] POST /debug/translate-text
+[2025-03-01T19:41:39.978Z] POST /translate-text 200 1947ms
+[2025-03-01T19:41:44.055Z] GET /debug/check-api-keys
+[2025-03-01T19:41:44.055Z] GET /check-api-keys 304 1886ms
+[2025-03-01T19:42:11.136Z] GET /manifest.json
+[2025-03-01T19:42:11.136Z] GET /manifest.json 304 3ms
+[2025-03-01T19:42:24.865Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json
+[2025-03-01T19:42:24.865Z] GET /subtitles/movie/tt32221196/filename=One.Of.Them.Days.2025.2160p.4K.WEB.x265.10bit.AAC5.1-%5BYTS.MX%5D.mkv&videoSize=4657325343&videoHash=b018e9d9cbb8761c.json 404 3ms
