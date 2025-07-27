@@ -1,87 +1,52 @@
-#!/usr/bin/env node
+const { addonBuilder, runHTTP } = require("stremio-addon-sdk");
+const axios = require("axios");
+require("dotenv").config();
 
-/**
- * Stremio Add-on Server
- * Provides subtitle translation functionality for Stremio
- */
+const manifest = require("./manifest.json");
+const builder = new addonBuilder(manifest);
 
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const fs = require('fs');
-require('dotenv').config();
+const OPENAI_KEY = process.env.OPENAI_API_KEY;
 
-// Import middleware
-const logger = require('./middleware/logger');
-const errorHandler = require('./middleware/error-handler');
-
-// Import route modules
-const stremioRoutes = require('./routes/stremio-routes');
-const subtitleRoutes = require('./routes/subtitle-routes');
-const debugRoutes = require('./routes/debug-routes');
-const utilityRoutes = require('./routes/utility-routes');
-
-// Import services
-const subtitleService = require('./lib/subtitles');
-const translationService = require('./lib/translation');
-
-// Load environment variables
-if (!process.env.GEMINI_API_KEY) {
-  console.warn('Warning: GEMINI_API_KEY not found in environment variables');
+// ✅ GPT Translation
+async function translateWithGPT(text) {
+  const response = await axios.post(
+    "https://api.openai.com/v1/chat/completions",
+    {
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: "Translate the following English text into Arabic naturally." },
+        { role: "user", content: text }
+      ],
+      temperature: 0.2
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${OPENAI_KEY}`
+      }
+    }
+  );
+  return response.data.choices[0].message.content.trim();
 }
 
-if (!process.env.OPENSUBTITLES_API_KEY) {
-  console.warn('Warning: OPENSUBTITLES_API_KEY not found in environment variables');
-}
+// ✅ Subtitle handler
+builder.defineSubtitlesHandler(async () => {
+  const englishText = "This is an example subtitle line.";
+  const translatedText = await translateWithGPT(englishText);
 
-// Create the Express app
-const app = express();
-const port = process.env.PORT || 7000;
-
-// Configure middleware
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(logger.requestLogger);
-
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Create necessary directories if they don't exist
-const translationsDir = path.join(__dirname, 'public', 'translations');
-if (!fs.existsSync(translationsDir)) {
-  fs.mkdirSync(translationsDir, { recursive: true });
-  console.log(`Created translations directory: ${translationsDir}`);
-}
-
-// Log uncaught exceptions
-process.on('uncaughtException', (err) => {
-  logger.error('Uncaught exception:', err);
+  return {
+    subtitles: [
+      {
+        id: "gpt-arabic",
+        lang: "ar",
+        url: "data:text/plain," + encodeURIComponent(translatedText),
+        title: "Arabic (AI Translated)"
+      }
+    ]
+  };
 });
 
-// Configure routes
-app.use('/subtitles', subtitleRoutes);
-app.use('/debug', debugRoutes);
-app.use('/', stremioRoutes);
-app.use('/', utilityRoutes);
+// ✅ Run built-in HTTP server (no middleware/logger needed)
+runHTTP(builder.getInterface(), { port: process.env.PORT || 7000 });
 
-// Error handling middleware
-app.use(errorHandler.notFoundHandler);
-app.use(errorHandler.errorHandler);
-
-// Start the server
-app.listen(port, () => {
-  logger.log(`Addon interface loaded successfully`);
-  
-  // Check if the API keys are configured
-  const geminiKeyConfigured = !!process.env.GEMINI_API_KEY;
-  const openSubtitlesKeyConfigured = !!process.env.OPENSUBTITLES_API_KEY;
-  
-  logger.log(`Server started on port ${port}`);
-  logger.log(`Gemini API key configured: ${geminiKeyConfigured ? 'Yes' : 'No'}`);
-  logger.log(`OpenSubtitles API key configured: ${openSubtitlesKeyConfigured ? 'Yes' : 'No'}`);
-  
-  // Log the add-on URL
-  const baseUrl = process.env.BASE_URL || `http://127.0.0.1:${port}`;
-  logger.log(`Add-on URL: ${baseUrl}/manifest.json`);
-});
+console.log("✅ GPT Arabic Subtitle Addon running!");
